@@ -1,5 +1,6 @@
-<h1>id: <%= @task.id %> のメッセージ編集ページ</h1>
+<h1>タスク編集ページ</h1>
+
+<p>タスク:<%= @task.content %></p>
+<p>状況:<%= @task.status %></p>
 
 <%= render 'form', task: @task %>
-
-<%= link_to '一覧に戻る', tasks_path %>
