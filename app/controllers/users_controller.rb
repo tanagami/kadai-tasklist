@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @current_user ||= User.find_by(id: session[:user_id]) #バッジ用
     @tasks = @user.task.order('created_at DESC')
     counts(@user)
   end
